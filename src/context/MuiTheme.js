@@ -18,6 +18,9 @@ const MuiGlobalTheme = ({ children }) => {
           "body": {
             backgroundColor: "#fff",
           },
+          a: {
+            textShadow: "unset",
+          },
         },
       },
     },
