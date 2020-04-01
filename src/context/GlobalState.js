@@ -1,5 +1,6 @@
 import React, { createContext, useReducer } from "react"
 import MuiGlobalTheme from "./MuiTheme"
+import { CssBaseline } from "@material-ui/core"
 
 export const GlobalState = createContext()
 export const GlobalDispatch = createContext()
@@ -21,7 +22,10 @@ const GlobalContext = ({ children }) => {
   return (
     <GlobalState.Provider value={state}>
       <GlobalDispatch.Provider value={dispatch}>
-        <MuiGlobalTheme>{children}</MuiGlobalTheme>
+        <MuiGlobalTheme>
+          <CssBaseline />
+          {children}
+        </MuiGlobalTheme>
       </GlobalDispatch.Provider>
     </GlobalState.Provider>
   )
